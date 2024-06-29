@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unauthorized Access</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #f8f9fa;
+        padding-top: 50px;
+        text-align: center;
+      }
+      .container {
+        max-width: 400px;
+      }
+      h1 {
+        color: #dc3545;
+      }
+      p {
+        color: #6c757d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">{{ error_message }}</h1>
+      <p class="lead">You do not have permission to access this page.</p>
+      <p>Redirecting you to the homepage...</p>
+    </div>
+
+    <!-- Bootstrap JS (optional, for responsive behavior) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom JS (for redirection after delay) -->
+    <script>
+      // Redirect to homepage after 3 seconds
+      $(document).ready(function () {
+        setTimeout(function () {
+          window.location.href = '/'
+        }, 3000) // 3000 milliseconds = 3 seconds
+      })
+    </script>
+  </body>
+</html>
